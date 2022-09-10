@@ -1,4 +1,4 @@
-package com.gerwalex.animations;
+package com.gerwalex.animations.demo;
 
 import android.app.Activity;
 import android.app.ListFragment;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.gerwalex.animations.model.DemoItem;
+import com.gerwalex.animations.demo.model.DemoItem;
 
 /**
  * A list fragment representing a list of Animations. This fragment also

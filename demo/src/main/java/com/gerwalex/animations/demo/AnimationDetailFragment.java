@@ -1,4 +1,4 @@
-package com.gerwalex.animations;
+package com.gerwalex.animations.demo;
 
 import android.app.Fragment;
 import android.graphics.Point;
@@ -12,7 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gerwalex.animations.model.DemoItem;
+import com.gerwalex.animations.demo.model.DemoItem;
 import com.gerwalex.animations.view.Animation;
 import com.gerwalex.animations.view.AnimationListener;
 import com.gerwalex.animations.view.BlindAnimation;

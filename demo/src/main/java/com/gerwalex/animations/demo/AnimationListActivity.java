@@ -1,4 +1,4 @@
-package com.gerwalex.animations;
+package com.gerwalex.animations.demo;
 
 import android.app.Activity;
 import android.content.Intent;

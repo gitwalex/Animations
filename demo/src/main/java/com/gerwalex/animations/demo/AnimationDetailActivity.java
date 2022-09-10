@@ -1,4 +1,4 @@
-package com.gerwalex.animations;
+package com.gerwalex.animations.demo;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -22,14 +22,13 @@ public class AnimationDetailActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animation_detail);
         // Show the Up button in the action bar.
-        getActionBar()
-                .setDisplayHomeAsUpEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         if (savedInstanceState == null) {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
             Bundle arguments = new Bundle();
-            arguments.putInt(AnimationDetailFragment.ARG_ITEM_ID, getIntent()
-                    .getIntExtra(AnimationDetailFragment.ARG_ITEM_ID, 0));
+            arguments.putInt(AnimationDetailFragment.ARG_ITEM_ID,
+                    getIntent().getIntExtra(AnimationDetailFragment.ARG_ITEM_ID, 0));
             AnimationDetailFragment fragment = new AnimationDetailFragment();
             fragment.setArguments(arguments);
             getFragmentManager()

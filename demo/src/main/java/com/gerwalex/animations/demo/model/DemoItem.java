@@ -1,4 +1,4 @@
-package com.gerwalex.animations.model;
+package com.gerwalex.animations.demo.model;
 
 import android.util.SparseArray;
 
