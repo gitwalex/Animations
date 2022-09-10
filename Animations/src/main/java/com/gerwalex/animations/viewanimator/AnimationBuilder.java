@@ -452,12 +452,9 @@ public class AnimationBuilder {
     }
 
     public AnimationBuilder width(float... width) {
-        return custom(new AnimationListener.Update() {
-            @Override
-            public void update(View view, float value) {
-                view.getLayoutParams().width = (int) value;
-                view.requestLayout();
-            }
+        return custom((view, value) -> {
+            view.getLayoutParams().width = (int) value;
+            view.requestLayout();
         }, width);
     }
 
