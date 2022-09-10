@@ -3,7 +3,7 @@
     android:id="@+id/fragment_animation_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".demo.AnimationDetailFragment">
+    tools:context=".AnimationDetailFragment">
 
     <ImageView
         android:id="@+id/imgBehind"

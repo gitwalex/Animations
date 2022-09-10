@@ -3,5 +3,5 @@
     android:id="@+id/animation_detail_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".demo.AnimationDetailActivity"
+    tools:context=".AnimationDetailActivity"
     tools:ignore="MergeRootFrame" />
