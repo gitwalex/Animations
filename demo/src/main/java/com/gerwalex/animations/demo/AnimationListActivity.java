@@ -41,7 +41,8 @@ public class AnimationListActivity extends Activity implements AnimationListFrag
             mTwoPane = true;
             // In two-pane mode, list items should be given the
             // 'activated' state when touched.
-            ((AnimationListFragment) getFragmentManager().findFragmentById(R.id.animation_list)).setActivateOnItemClick(true);
+            ((AnimationListFragment) getFragmentManager().findFragmentById(R.id.animation_list)).setActivateOnItemClick(
+                    true);
         }
         // TODO: If exposing deep links into your app, handle intents here.
     }
