@@ -19,7 +19,7 @@ public class ScaleOutAnimation extends Animation implements Combinable {
 
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 
 	/**
 	 * This animation scales out the view from 1 to 0. On animation end, the
@@ -101,17 +101,16 @@ public class ScaleOutAnimation extends Animation implements Combinable {
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
-	 * @param listener
-	 *            The listener to set for the end of the animation.
+	 * @param listener The listener to set for the end of the animation.
 	 * @return This object, allowing calls to methods in this class to be
-	 *         chained.
+	 * chained.
 	 */
-	public ScaleOutAnimation setListener(AnimationListener listener) {
+	public ScaleOutAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

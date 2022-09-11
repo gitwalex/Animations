@@ -20,7 +20,7 @@ public class BlinkAnimation extends Animation {
 	int numOfBlinks, blinkCount = 0;
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 
 	/**
 	 * This animation causes the view to fade in and fade out a customizable
@@ -118,15 +118,14 @@ public class BlinkAnimation extends Animation {
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
-	 * @param listener
-	 *            The listener to set for the end of the animation.
+	 * @param listener The listener to set for the end of the animation.
 	 */
-	public BlinkAnimation setListener(AnimationListener listener) {
+	public BlinkAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

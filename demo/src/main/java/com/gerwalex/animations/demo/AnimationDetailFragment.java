@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.gerwalex.animations.demo.model.DemoItem;
 import com.gerwalex.animations.view.Animation;
-import com.gerwalex.animations.view.AnimationListener;
+import com.gerwalex.animations.view.AnimationEndListener;
 import com.gerwalex.animations.view.BlindAnimation;
 import com.gerwalex.animations.view.BlinkAnimation;
 import com.gerwalex.animations.view.BounceAnimation;
@@ -90,7 +90,7 @@ public class AnimationDetailFragment extends Fragment implements OnClickListener
                 break;
             case 2:
                 new BlinkAnimation(card)
-                        .setListener(new AnimationListener() {
+                        .setListener(new AnimationEndListener() {
                             @Override
                             public void onAnimationEnd(Animation animation) {
                                 mPlayView.setVisibility(View.VISIBLE);
@@ -102,7 +102,7 @@ public class AnimationDetailFragment extends Fragment implements OnClickListener
                 new BounceAnimation(card)
                         .setNumOfBounces(3)
                         .setDuration(Animation.DURATION_SHORT)
-                        .setListener(new AnimationListener() {
+                        .setListener(new AnimationEndListener() {
 
                             @Override
                             public void onAnimationEnd(Animation animation) {
@@ -125,7 +125,7 @@ public class AnimationDetailFragment extends Fragment implements OnClickListener
                 break;
             case 7:
                 new FlipHorizontalAnimation(card)
-                        .setListener(new AnimationListener() {
+                        .setListener(new AnimationEndListener() {
 
                             @Override
                             public void onAnimationEnd(Animation animation) {
@@ -143,7 +143,7 @@ public class AnimationDetailFragment extends Fragment implements OnClickListener
                 break;
             case 9:
                 new FlipVerticalAnimation(card)
-                        .setListener(new AnimationListener() {
+                        .setListener(new AnimationEndListener() {
 
                             @Override
                             public void onAnimationEnd(Animation animation) {
@@ -179,7 +179,7 @@ public class AnimationDetailFragment extends Fragment implements OnClickListener
                 break;
             case 13:
                 new HighlightAnimation(card)
-                        .setListener(new AnimationListener() {
+                        .setListener(new AnimationEndListener() {
 
                             @Override
                             public void onAnimationEnd(Animation animation) {
@@ -200,7 +200,7 @@ public class AnimationDetailFragment extends Fragment implements OnClickListener
                 new PathAnimation(card)
                         .setPoints(points)
                         .setDuration(2000)
-                        .setListener(new AnimationListener() {
+                        .setListener(new AnimationEndListener() {
 
                             @Override
                             public void onAnimationEnd(Animation animation) {
@@ -220,7 +220,7 @@ public class AnimationDetailFragment extends Fragment implements OnClickListener
             case 17:
                 new RotationAnimation(card)
                         .setPivot(RotationAnimation.PIVOT_TOP_LEFT)
-                        .setListener(new AnimationListener() {
+                        .setListener(new AnimationEndListener() {
 
                             @Override
                             public void onAnimationEnd(Animation animation) {
@@ -241,7 +241,7 @@ public class AnimationDetailFragment extends Fragment implements OnClickListener
                 new ShakeAnimation(card)
                         .setNumOfShakes(3)
                         .setDuration(Animation.DURATION_SHORT)
-                        .setListener(new AnimationListener() {
+                        .setListener(new AnimationEndListener() {
 
                             @Override
                             public void onAnimationEnd(Animation animation) {
@@ -281,7 +281,7 @@ public class AnimationDetailFragment extends Fragment implements OnClickListener
                 break;
             case 26:
                 card.setImageResource(R.drawable.img1);
-                final AnimationListener explodeAnimListener = new AnimationListener() {
+                final AnimationEndListener explodeAnimListener = new AnimationEndListener() {
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
@@ -289,7 +289,7 @@ public class AnimationDetailFragment extends Fragment implements OnClickListener
                         mPlayView.setVisibility(View.VISIBLE);
                     }
                 };
-                final AnimationListener bounceAnimListener = new AnimationListener() {
+                final AnimationEndListener bounceAnimListener = new AnimationEndListener() {
 
                     @Override
                     public void onAnimationEnd(Animation animation) {

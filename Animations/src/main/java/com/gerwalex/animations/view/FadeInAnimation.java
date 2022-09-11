@@ -18,7 +18,7 @@ public class FadeInAnimation extends Animation implements Combinable {
 
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 
 	/**
 	 * This animation fades the view in by animating its alpha property from 0
@@ -94,14 +94,14 @@ public class FadeInAnimation extends Animation implements Combinable {
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
 	 * @return The listener to set for the end of the animation.
 	 */
-	public FadeInAnimation setListener(AnimationListener listener) {
+	public FadeInAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

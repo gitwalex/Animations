@@ -26,7 +26,7 @@ public class FoldAnimation extends Animation {
 	float anchorFactor;
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 
 	/**
 	 * This animation folds out the view for a customizable number of folds,
@@ -192,17 +192,16 @@ public class FoldAnimation extends Animation {
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
-	 * @param listener
-	 *            The listener to set for the end of the animation.
+	 * @param listener The listener to set for the end of the animation.
 	 * @return This object, allowing calls to methods in this class to be
-	 *         chained.
+	 * chained.
 	 */
-	public FoldAnimation setListener(AnimationListener listener) {
+	public FoldAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

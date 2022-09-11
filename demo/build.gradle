@@ -24,6 +24,19 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+        // Compile für unchecked und deprecation
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+        tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+            kotlinOptions {
+                jvmTarget = '1.8'
+                freeCompilerArgs = ["-Xjavac-arguments='-Xlint:unchecked -Xlint:deprecation'"]
+                freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
+                freeCompilerArgs += "-Xjvm-default=all"
+            }
+        }
+
     }
     buildFeatures {
         viewBinding true

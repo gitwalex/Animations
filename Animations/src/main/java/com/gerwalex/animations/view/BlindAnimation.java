@@ -21,7 +21,7 @@ public class BlindAnimation extends Animation {
 
     long duration;
     TimeInterpolator interpolator;
-    AnimationListener listener;
+    AnimationEndListener listener;
 
     /**
      * This animation hides the view by scaling its Y property to mimic the
@@ -114,7 +114,7 @@ public class BlindAnimation extends Animation {
     /**
      * @return The listener for the end of the animation.
      */
-    public AnimationListener getListener() {
+    public AnimationEndListener getListener() {
         return listener;
     }
 
@@ -123,7 +123,7 @@ public class BlindAnimation extends Animation {
      * @return This object, allowing calls to methods in this class to be
      * chained.
      */
-    public BlindAnimation setListener(AnimationListener listener) {
+    public BlindAnimation setListener(AnimationEndListener listener) {
         this.listener = listener;
         return this;
     }

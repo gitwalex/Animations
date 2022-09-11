@@ -22,7 +22,7 @@ public class TransferAnimation extends Animation {
 	int transY;
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 	ViewGroup parentView;
 
 	/**
@@ -131,17 +131,16 @@ public class TransferAnimation extends Animation {
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
-	 * @param listener
-	 *            The listener to set for the end of the animation.
+	 * @param listener The listener to set for the end of the animation.
 	 * @return This object, allowing calls to methods in this class to be
-	 *         chained.
+	 * chained.
 	 */
-	public TransferAnimation setListener(AnimationListener listener) {
+	public TransferAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

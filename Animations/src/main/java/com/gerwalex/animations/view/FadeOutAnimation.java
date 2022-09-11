@@ -20,7 +20,7 @@ public class FadeOutAnimation extends Animation implements Combinable {
 
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 
 	/**
 	 * This animation fades the view out by animating its alpha property to 0.
@@ -98,15 +98,14 @@ public class FadeOutAnimation extends Animation implements Combinable {
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
-	 * @param listener
-	 *            The listener to set for the end of the animation.
+	 * @param listener The listener to set for the end of the animation.
 	 */
-	public FadeOutAnimation setListener(AnimationListener listener) {
+	public FadeOutAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

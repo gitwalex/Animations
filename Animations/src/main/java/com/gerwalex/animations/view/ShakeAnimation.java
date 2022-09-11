@@ -27,7 +27,7 @@ public class ShakeAnimation extends Animation {
 	int shakeCount = 0;
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 
 	/**
 	 * This animation causes the view to shake from left to right / up to down for a
@@ -163,17 +163,16 @@ public class ShakeAnimation extends Animation {
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
-	 * @param listener
-	 *            The listener to set for the end of the animation.
+	 * @param listener The listener to set for the end of the animation.
 	 * @return This object, allowing calls to methods in this class to be
-	 *         chained.
+	 * chained.
 	 */
-	public ShakeAnimation setListener(AnimationListener listener) {
+	public ShakeAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

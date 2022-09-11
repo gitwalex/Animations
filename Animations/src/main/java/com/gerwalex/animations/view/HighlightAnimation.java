@@ -23,7 +23,7 @@ public class HighlightAnimation extends Animation {
 	int color;
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 
 	/**
 	 * This animation makes use of a translucent box to overlay the view before
@@ -35,7 +35,7 @@ public class HighlightAnimation extends Animation {
 	 *            the duration of the entire animation
 	 * @param listener
 	 *            the AnimationListener of animation @see
-	 *            {@link AnimationListener}
+	 *            {@link AnimationEndListener}
 	 */
 	public HighlightAnimation(View view) {
 		this.view = view;
@@ -140,17 +140,16 @@ public class HighlightAnimation extends Animation {
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
-	 * @param listener
-	 *            The listener to set for the end of the animation.
+	 * @param listener The listener to set for the end of the animation.
 	 * @return This object, allowing calls to methods in this class to be
-	 *         chained.
+	 * chained.
 	 */
-	public HighlightAnimation setListener(AnimationListener listener) {
+	public HighlightAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

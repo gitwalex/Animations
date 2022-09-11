@@ -22,7 +22,7 @@ public class BounceAnimation extends Animation {
 	int numOfBounces, bounceCount = 0;
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 
 	/**
 	 * This animation causes the view to bounce by translating up and down for a
@@ -150,17 +150,16 @@ public class BounceAnimation extends Animation {
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
-	 * @param listener
-	 *            The listener to set for the end of the animation.
+	 * @param listener The listener to set for the end of the animation.
 	 * @return This object, allowing calls to methods in this class to be
-	 *         chained.
+	 * chained.
 	 */
-	public BounceAnimation setListener(AnimationListener listener) {
+	public BounceAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

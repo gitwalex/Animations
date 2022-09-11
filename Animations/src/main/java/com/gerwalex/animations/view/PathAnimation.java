@@ -33,7 +33,7 @@ public class PathAnimation extends Animation
 	int anchorPoint;
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 
 	/**
 	 * This animation translates the view within its parent view and according
@@ -208,17 +208,16 @@ public class PathAnimation extends Animation
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
-	 * @param listener
-	 *            The listener to set for the end of the animation.
+	 * @param listener The listener to set for the end of the animation.
 	 * @return This object, allowing calls to methods in this class to be
-	 *         chained.
+	 * chained.
 	 */
-	public PathAnimation setListener(AnimationListener listener) {
+	public PathAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

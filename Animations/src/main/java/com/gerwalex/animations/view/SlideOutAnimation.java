@@ -23,7 +23,7 @@ public class SlideOutAnimation extends Animation implements Combinable {
 	int direction;
 	TimeInterpolator interpolator;
 	long duration;
-	AnimationListener listener;
+	AnimationEndListener listener;
 	ValueAnimator slideAnim;
 
 	/**
@@ -160,17 +160,16 @@ public class SlideOutAnimation extends Animation implements Combinable {
 	/**
 	 * @return The listener for the end of the animation.
 	 */
-	public AnimationListener getListener() {
+	public AnimationEndListener getListener() {
 		return listener;
 	}
 
 	/**
-	 * @param listener
-	 *            The listener to set for the end of the animation.
+	 * @param listener The listener to set for the end of the animation.
 	 * @return This object, allowing calls to methods in this class to be
-	 *         chained.
+	 * chained.
 	 */
-	public SlideOutAnimation setListener(AnimationListener listener) {
+	public SlideOutAnimation setListener(AnimationEndListener listener) {
 		this.listener = listener;
 		return this;
 	}

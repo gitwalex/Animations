@@ -32,10 +32,9 @@ android {
         tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
             kotlinOptions {
                 jvmTarget = '1.8'
-                freeCompilerArgs = [
-                        "-Xjavac-arguments='-Xlint:unchecked -Xlint:deprecation'"
-                ]
+                freeCompilerArgs = ["-Xjavac-arguments='-Xlint:unchecked -Xlint:deprecation'"]
                 freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
+                freeCompilerArgs += "-Xjvm-default=all"
             }
         }
 
